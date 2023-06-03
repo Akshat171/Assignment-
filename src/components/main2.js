@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DataTable from "react-data-table-component";
-import { Column } from "primereact/column";
-import { InputText } from "primereact/inputtext";
-import { Dropdown } from "primereact/dropdown";
-import { MultiSelect } from "primereact/multiselect";
-import { Tag } from "primereact/tag";
-import { TriStateCheckbox } from "primereact/tristatecheckbox";
+
 import { AiFillDelete, AiOutlineEdit } from "react-icons/ai";
 
 import data from "./data.json";
@@ -55,7 +50,7 @@ const Main2 = () => {
 
     {
       name: "Action",
-      cell: (row) => (
+      cell: () => (
         <div className="flex flex-row gap-1">
           <div class="group relative cursor-pointer">
             <span class="underline hover:cursor-pointer">

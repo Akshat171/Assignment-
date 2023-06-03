@@ -18,9 +18,6 @@ const Header = () => {
                 height="47px"
                 className="rounded-full"
               />
-              {/* <span class="leading-10 text-gray-700 text-2xl font-bold ml-1  font-Nuni  ">
-                Stealth
-              </span> */}
             </a>
           </div>
         </div>
