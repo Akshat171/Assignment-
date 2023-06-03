@@ -84,11 +84,7 @@ const Main2 = () => {
     const newList = items.filter((li) => li.id !== id);
     setItems(newList);
   }
-  const deleteRow = (number) => {
-    const copy = [...items];
-    copy = copy.filter((item, index) => number != index);
-    setItems(copy);
-  };
+
   return (
     <div className="main-content flex flex-row flex-grow p-4">
       <div className="p-4" style={{ width: "1100px" }}>
@@ -105,7 +101,6 @@ const Main2 = () => {
           highlightOnHover
           title={<span className="font-Nuni">All orders</span>}
           subHeader
-          delRow={deleteRow}
           subHeaderComponent={
             <input
               className="shadow appearance-none border rounded w-25 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
