@@ -1,6 +1,7 @@
 import React from "react";
-import { AiOutlinePlus } from "react-icons/ai";
-
+import { AiOutlinePlus, AiFillSetting } from "react-icons/ai";
+import { FaCubes } from "react-icons/fa";
+import Image from "./logo.png";
 import Main2 from "./main2";
 
 const Header = () => {
@@ -11,15 +12,15 @@ const Header = () => {
           <div class="inline-flex">
             <a href="#" class="inline-flex flex-row items-center">
               <img
-                src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTOajjg1jPPiTXTrmXjeL3wvR79OLTI3QPvr6n61-O09iwyKVq_"
+                src={Image}
                 alt="icon"
-                width="40px"
-                height="40px"
+                width="73px"
+                height="47px"
                 className="rounded-full"
               />
-              <span class="leading-10 text-gray-700 text-2xl font-bold ml-1  font-Nuni  ">
+              {/* <span class="leading-10 text-gray-700 text-2xl font-bold ml-1  font-Nuni  ">
                 Stealth
-              </span>
+              </span> */}
             </a>
           </div>
         </div>
@@ -28,29 +29,48 @@ const Header = () => {
             <li class="my-px">
               <a
                 href="#"
-                class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-700 bg-blue-100"
+                class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-700 hover:bg-blue-100  hover:text-blue-600"
               >
                 <img
-                  src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR3_fwQN088hqkEjxXLjt2IJCxak6jXS2tzzzoFnR8wNNbAconF"
+                  src="https://cdn-icons-png.flaticon.com/512/4692/4692210.png"
                   alt="icon"
-                  width="20px"
-                  height="20px"
+                  width="25px"
+                  height="25px"
                   className="rounded-full"
                 />
+                <span class="ml-3 font-Nuni">Report</span>
+              </a>
+            </li>
+            <li class="my-px">
+              <a
+                href="#"
+                class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-700 hover:bg-blue-100  hover:text-blue-600"
+              >
+                <FaCubes />
 
-                <span class="ml-3 font-Nuni">File Manager</span>
+                <span class="ml-3 font-Nuni">Workspace</span>
+              </a>
+            </li>
+            <li class="my-px">
+              <a
+                href="#"
+                class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-700 hover:bg-blue-100 hover:text-blue-600"
+              >
+                <AiFillSetting />
+
+                <span class="ml-3 font-Nuni">Setting</span>
               </a>
             </li>
           </ul>
         </div>
       </aside>
-      <main class="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in">
-        <header class="header bg-white shadow py-4 px-4">
+      <main class="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all  duration-150 ease-in">
+        <header class="header bg-white  shadow py-4 px-4">
           <div class="header-content flex items-center flex-row">
             <form action="#">
               <div class="hidden md:flex relative">
                 <span class="leading-10 text-gray-700 text-2xl font-bold ml-1 font-Nuni">
-                  File Manager
+                  Orders
                 </span>
               </div>
               <div class="flex md:hidden">
@@ -80,7 +100,7 @@ const Header = () => {
                 <span class="flex items-center justify-center text-lg text-white font-bold">
                   <AiOutlinePlus />
                 </span>
-                <span class="ml-3 font-Nuni">Upload</span>
+                <span class="ml-3 font-Nuni">Add Orders </span>
               </button>
             </div>
           </div>
