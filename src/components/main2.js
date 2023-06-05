@@ -7,59 +7,59 @@ import data from "./data.json";
 const Main2 = () => {
   const columns = [
     {
-      name: "Logo",
+      name: "Company",
       selector: (row) => (
-        <img
-          width={30}
-          height={30}
-          className="rounded-full"
-          src={row.logo}
-          alt="owner"
-        />
+        <div className="flex flex-row p-2 font-Nuni">
+          <div>
+            <img
+              width={58}
+              height={39}
+              className="rounded-xl"
+              src={row.logo}
+              alt="owner"
+            />
+          </div>
+          <div className="flex flex-col pt-1 ">
+            <div>
+              <p className="text-xs  px-2 font-bold text-black">
+                {row.brand_name}
+              </p>
+            </div>
+            <div>
+              <p className="text-xs px-2 font-thin text-gray-500">{row.item}</p>
+            </div>
+          </div>
+        </div>
       ),
     },
     {
-      name: "Brand Name",
-      selector: (row) => row.brand_name,
-      sortable: true,
+      name: "Active Orders",
+      selector: (row) => row.active_orders,
     },
-    {
-      name: "Model Name",
-      selector: "item",
-      sortable: true,
-    },
-    {
-      name: "Status",
-      selector: "status",
-    },
-    {
-      name: "Quantity",
-      selector: "quantity",
-      sortable: true,
-    },
+
     {
       name: "Amount",
-      selector: "price",
+      selector: (row) => row.price,
       sortable: true,
     },
     {
       name: "Placed on",
-      selector: "placed_on",
+      selector: (row) => row.placed_on,
       sortable: true,
     },
 
     {
-      name: "Action",
+      name: "Options",
       cell: () => (
         <div className="flex flex-row gap-1">
-          <div class="group relative cursor-pointer">
-            <span class="underline hover:cursor-pointer">
+          <div className="group relative cursor-pointer">
+            <span className="underline hover:cursor-pointer">
               <AiOutlineEdit />
             </span>
           </div>
 
-          <div class="group relative cursor-pointer">
-            <span class="underline hover:cursor-pointer">
+          <div className="group relative cursor-pointer">
+            <span className="underline hover:cursor-pointer">
               <AiFillDelete type="button" onClick={(e) => handleDelete(e.id)} />
             </span>
           </div>
@@ -90,7 +90,7 @@ const Main2 = () => {
       <div className="p-4" style={{ width: "1100px" }}>
         <DataTable
           globalFilterFields={["brand_name", "quantity", "price", "status"]}
-          className="font-Nuni uppercase"
+          className="font-Nuni"
           columns={columns}
           data={filteredData}
           pagination
